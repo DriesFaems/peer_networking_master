@@ -46,7 +46,7 @@ with st.form("registration_form"):
     )
     
     # user needs to upload a PDF of their LinkedIn profile
-    uploaded_file = st.file_uploader("Please upload a PDF of your LinkedIn profile. You can find this PDF by going to your LinkedIn profile page, click on Resources, and click on Save PDF. By uploading the file, you agree that we use and store your LinkedIn profile for the purpose of matchig for the Alpbach workshop", 
+    uploaded_file = st.file_uploader("Please upload a PDF of your LinkedIn profile. You can find this PDF by going to your LinkedIn profile page, click on Resources, and click on Save PDF. You can also upload a PDF ofyour CV if you are not able to get a LinkedIn PDF By uploading the file, you agree that we use and store your LinkedIn profile/CV for the purpose of WHU peer matching", 
                                    type="pdf")
     
     # user needs to describe their hobbies and interests
