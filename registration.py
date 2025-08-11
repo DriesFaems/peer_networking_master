@@ -58,6 +58,13 @@ with st.form("registration_form"):
     # user needs to describe their career aspirations
     career_aspirations = st.text_area("Please describe your career aspirations *", placeholder="e.g., I want to create my own SaaS startup.")
     
+    # Add a required opt-in checkbox for email sharing consent
+    email_sharing_opt_in = st.checkbox(
+        "I agree that matched people will receive my email address to reach out *",
+        value=False,
+        help="Required: You must agree to allow your email address to be shared with matched participants."
+    )
+    
     st.markdown("*Required fields")
     submit_form = st.form_submit_button("Submit")
 
@@ -97,7 +104,11 @@ if submit_form:
     # Validate career aspirations
     if not career_aspirations or not career_aspirations.strip():
         errors.append("Please describe your career aspirations.")
-
+    
+    # Validate email sharing opt-in
+    if not email_sharing_opt_in:
+        errors.append("You must agree to allow your email address to be shared with matched participants.")
+    
     # Display errors if any
     if errors:
         for error in errors:
