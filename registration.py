@@ -37,7 +37,8 @@ with st.form("registration_form"):
         "Master in Management",
         "Master in Finance",
         "Master in Business Analytics",
-        "Master in Entrepreneurship"
+        "Master in Entrepreneurship",
+        "Master in International Business"
     ]
     selected_program = st.radio(
         "Please select your program of study *",
